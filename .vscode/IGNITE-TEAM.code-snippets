@@ -8,7 +8,7 @@
       "export function ${TM_FILENAME_BASE}() {",
       "  return (",
       "    <>",
-      "      <Center>",
+      "      <Center flex={1}>",
       "        <Text>${TM_FILENAME_BASE}</Text>",
       "      </Center>",
       "    </>",

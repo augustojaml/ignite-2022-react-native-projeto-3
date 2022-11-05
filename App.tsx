@@ -1,6 +1,7 @@
 import { NativeBaseProvider } from 'native-base';
 import React from 'react';
 import { StatusBar } from 'react-native';
+import 'react-native-gesture-handler';
 
 import {
   JosefinSans_400Regular,
@@ -18,8 +19,7 @@ import {
 } from '@expo-google-fonts/montserrat';
 
 import { Loading } from '@components/Loading';
-import { SignUp } from '@screens/SignUp';
-import { SignIn } from '@screens/SignIn';
+import { MainRoutes } from '@routes/MainRoutes';
 import { theme } from './src/theme';
 
 export default function App() {
@@ -38,7 +38,7 @@ export default function App() {
     <NativeBaseProvider theme={theme}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
 
-      {fontsLoaded ? <SignUp /> : <Loading />}
+      {fontsLoaded ? <MainRoutes /> : <Loading />}
     </NativeBaseProvider>
   );
 }
